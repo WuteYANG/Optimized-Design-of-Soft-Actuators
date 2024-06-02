@@ -77,8 +77,5 @@ sol
 optimzed_val = -fval
 
 %% To check if the natural frequency is in desired range
-naturalFreq = 0.03*(sol.a + sol.b)^3
-% The value of upper bound
-upper_NF = (6*0.36*wu^2*L^2)/E
-% The value of lower bound
-lower_NF = (6*0.36*wl^2*L^2)/E
+n = 1.0; % n dependes on the soft materials (1.0~2.0)
+naturalFreq = sol.w*(sol.a + sol.b)^(n+2)
