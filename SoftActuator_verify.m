@@ -25,7 +25,7 @@ torque = C*P;
 
 
 %% Pressure-to-Bending model
-n = 1.1; % power of elongation term
+n = 1.0; % power of elongation term (1.0~1.8 depends on the material properties)
 In = (0.5)^(1+n)*(1/(2+n))*w*(a+b)^(2+n)
 I = (1/12)*w*(a+b)^3
 A = (w-2*t)*(b-t);
