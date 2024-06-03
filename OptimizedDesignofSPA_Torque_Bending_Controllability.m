@@ -40,11 +40,11 @@ torque = (f1+f2*f3);
 % If we set torque as "0", the algo only optimizes the bending angle
 
 % Pressure-to-bending model 
+n = 1.0;      % n varies with material properties; n=1 for linear model; n>1 for nonlinear model
 I = (1/2)^(1+n)*(1/(2+n))*w*(b+a)^(2+n); % moment of inertia
 A = (w-2*t)*(b-t);  % cross-sectional area of chamber only
 Aw = (w*(a+b))-A;   % cross-sectional area of SPA minus chamber area
 L = 0.094;    % Lenght of SPA
-n = 1.0;      % n varies with material properties; n=1 for linear model; n>1 for nonlinear model
 E = 340000;   % Young's modulus of DragonSkin 20
 theta = (((n/(n+1))^n*(C*P/(E*I))*(L+(L*P*A/(Aw*E)))^n))^(1/n)*180/pi;
 % If we set theta as "0", the algo only optimizes the torque
