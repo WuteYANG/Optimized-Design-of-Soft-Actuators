@@ -8,13 +8,13 @@ clc;
 % fabrications.
 
 %% Optimal parameters
-b = 0.02;
-a = 0.004;
-t = 0.0015;
-w = 0.03;
-L = 0.094;
-E = 340000;
-P = 0.15*1000000;
+b = 0.02; % m
+a = 0.004; % m
+t = 0.0015; % m
+w = 0.03; % m
+L = 0.094; % m
+E = 340000; % Pa
+P = 0.15*1000000; % Pa
 
 %% Pressure-to-Torque model
 f1 = 0.5*P*(b-t)*(b-t)*(w-2*t);
