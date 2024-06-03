@@ -40,7 +40,7 @@ torque = (f1+f2*f3);
 % If we set torque as "0", the algo only optimizes the bending angle
 
 % Pressure-to-bending model 
-I = (1/12)*w*(b+a)^3; % moment of inertia
+I = (1/2)^(1+n)*(1/(2+n))*w*(b+a)^(2+n); % moment of inertia
 A = (w-2*t)*(b-t);  % cross-sectional area of chamber only
 Aw = (w*(a+b))-A;   % cross-sectional area of SPA minus chamber area
 L = 0.094;    % Lenght of SPA
