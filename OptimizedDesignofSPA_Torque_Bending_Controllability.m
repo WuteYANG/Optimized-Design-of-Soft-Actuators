@@ -52,6 +52,8 @@ theta = (((n/(n+1))^n*(C*P/(E*I))*(L+(L*P*A/(Aw*E)))^n))^(1/n)*180/pi;
 %% Determine the optimization function
 % objective function
 prob = optimproblem("Objective", -(torque/0.36 * theta/250));
+options = optimoptions('fmincon', 'Algorithm','interior-point','Display','iter','ConstraintTolerance',1e-12);
+% options = optimoptions('fmincon', 'Algorithm','sqp','Display','iter','ConstraintTolerance',1e-12);
 % The torque and bending angle are in different units.
 % Thus, torque is normalized by 0.36 N-m and theta is normalized by 250 deg
 % to balance both performance metrics
